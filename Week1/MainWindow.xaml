@@ -8,20 +8,21 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Label Content="Bands" HorizontalAlignment="Left" Margin="48,10,0,0" VerticalAlignment="Top" Height="52" Width="135" FontSize="36"/>
-        <ComboBox x:Name="cmbx_Genre" HorizontalAlignment="Left" Margin="113,67,0,0" VerticalAlignment="Top" Width="120">
+        <ComboBox x:Name="cmbx_Genre" HorizontalAlignment="Left" Margin="113,67,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cmbx_Genre_SelectionChanged">
+            <ComboBoxItem Content="All"/>
             <ComboBoxItem Content="Rock"/>
             <ComboBoxItem Content="Pop"/>
             <ComboBoxItem Content="Indie"/>
         </ComboBox>
         <Label Content="Genre:" HorizontalAlignment="Left" Margin="48,63,0,0" VerticalAlignment="Top" Width="65"/>
-        <ListBox x:Name="lbx_Bands" HorizontalAlignment="Left" Height="216" Margin="48,144,0,0" VerticalAlignment="Top" Width="185"/>
+        <ListBox x:Name="lbx_Bands" HorizontalAlignment="Left" Height="216" Margin="48,144,0,0" VerticalAlignment="Top" Width="185" SelectionChanged="lbx_Bands_SelectionChanged_1"/>
         <Label Content="Band Information" HorizontalAlignment="Left" Margin="462,10,0,0" VerticalAlignment="Top" FontSize="36"/>
         <Label Content="Formed: " HorizontalAlignment="Left" Margin="462,73,0,0" VerticalAlignment="Top"/>
         <Label Content="Members: " HorizontalAlignment="Left" Margin="462,104,0,0" VerticalAlignment="Top"/>
         <TextBlock x:Name="tblk_Formed" HorizontalAlignment="Left" Margin="524,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <TextBlock x:Name="tblk_Members" HorizontalAlignment="Left" Margin="528,109,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <Label Content="Albums" HorizontalAlignment="Left" Margin="462,144,0,0" VerticalAlignment="Top" FontSize="36"/>
-        <ListBox HorizontalAlignment="Left" Height="158" Margin="462,202,0,0" VerticalAlignment="Top" Width="287"/>
+        <ListBox x:Name="lbx_Albums" HorizontalAlignment="Left" Height="158" Margin="462,202,0,0" VerticalAlignment="Top" Width="287"/>
         <Button x:Name="btn_Save" Content="Save" HorizontalAlignment="Left" Margin="674,377,0,0" VerticalAlignment="Top" Width="75"/>
 
     </Grid>

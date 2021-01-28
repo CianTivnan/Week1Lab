@@ -15,6 +15,8 @@ namespace Week1
 
         public string Members { get; set; }
 
+        public List<Album> Albums { get; set; }
+
         //ctors
         public Band() { }
 
@@ -23,6 +25,7 @@ namespace Week1
             BandName = a;
             YearFormed = b;
             Members = c;
+            Albums = new List<Album>();
         }
 
         
