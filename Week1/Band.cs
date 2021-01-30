@@ -26,13 +26,18 @@ namespace Week1
             YearFormed = b;
             Members = c;
             Albums = new List<Album>();
-        }
-
-        
+        }        
 
         public int CompareTo(Band band)
         {
             return BandName.CompareTo(band.BandName);
+        }
+
+        public string ToFile()
+        {
+            string albumList;
+            albumList = String.Join(",\n", this.Albums);
+            return String.Format("Band Name : {0}\nYear Formed : {1}\nMembers : {2}\nAlbums : {3}", this.BandName, this.YearFormed.ToString(), this.Members, albumList);
         }
     }
 

@@ -32,16 +32,15 @@ namespace Week1
         public override string ToString()
         {
             DateTime zeroTime = new DateTime(1, 1, 1);
-            TimeSpan sinceRelease = (DateTime.Today - Released);
+            TimeSpan sinceRelease = (DateTime.Today - this.Released);
             int years = (zeroTime + sinceRelease).Year - 1;
 
-            return AlbumName + ", " + Sales + " sales, \n" + "Years since release: " + years;
+            return AlbumName + ", " + Sales + " sales, " + Released.ToShortDateString() + "\n" + "Years since release: " + years;
         }
 
-
-        private Random gen = new Random();
         private DateTime RandomYear()
         {
+            Random gen = new Random();
             DateTime start = new DateTime(2000, 1, 1);
             int range = (DateTime.Today - start).Days;
             return start.AddDays(gen.Next(range));

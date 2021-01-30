@@ -23,7 +23,7 @@
         <TextBlock x:Name="tblk_Members" HorizontalAlignment="Left" Margin="528,109,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <Label Content="Albums" HorizontalAlignment="Left" Margin="462,144,0,0" VerticalAlignment="Top" FontSize="36"/>
         <ListBox x:Name="lbx_Albums" HorizontalAlignment="Left" Height="158" Margin="462,202,0,0" VerticalAlignment="Top" Width="287"/>
-        <Button x:Name="btn_Save" Content="Save" HorizontalAlignment="Left" Margin="674,377,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="btn_Save" Content="Save" HorizontalAlignment="Left" Margin="674,377,0,0" VerticalAlignment="Top" Width="75" Click="btn_Save_Click"/>
 
     </Grid>
 </Window>

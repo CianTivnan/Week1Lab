@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
+using Microsoft.Win32;
 
 namespace Week1
 {
@@ -176,6 +178,21 @@ namespace Week1
             }
 
             DisplayBands();
+        }
+
+        private void btn_Save_Click(object sender, RoutedEventArgs e)
+        {
+            Band SelectedBand = lbx_Bands.SelectedItem as Band;
+
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "Text file (*.txt)|*.txt|C# file (*.cs)|*.cs";
+            saveFileDialog.FileName = SelectedBand.BandName;
+            saveFileDialog.InitialDirectory = @"c:\temp\";
+            if (saveFileDialog.ShowDialog() == true)
+            {
+                File.WriteAllText(saveFileDialog.FileName, SelectedBand.ToFile());
+            }
+
         }
     }
 }
