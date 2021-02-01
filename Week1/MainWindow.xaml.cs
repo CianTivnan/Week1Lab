@@ -17,9 +17,12 @@ using Microsoft.Win32;
 
 namespace Week1
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Author - Cian Tivnan
+    Date Completed - 30/01/2020 
+    Desc - Week 1 Lab Task
+    Github Link - https://github.com/CianTivnan/Week1Lab
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     public partial class MainWindow : Window
     {
         static List<Band> DisplayList = new List<Band>();
